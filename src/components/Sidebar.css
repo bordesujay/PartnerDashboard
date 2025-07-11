@@ -48,9 +48,8 @@
 }
 
 .sidebar-link.active {
-  background: linear-gradient(90deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
   color: #ffffff;
-  border-right: 3px solid #d4af37;
 }
 
 .sidebar-link.active::before {
@@ -60,7 +59,7 @@
   top: 0;
   bottom: 0;
   width: 4px;
-  background: #d4af37;
+  background: #ffffff;
 }
 
 .sidebar-icon {
@@ -121,8 +120,8 @@
 }
 
 .sidebar-sublink.active {
-  background: rgba(212, 175, 55, 0.15);
-  color: #d4af37;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
   font-weight: 500;
 }
 
