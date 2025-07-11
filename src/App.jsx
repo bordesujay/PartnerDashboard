@@ -15,8 +15,6 @@ function App() {
         <Sidebar />
         <main className="main-content">
           <div className="dashboard-welcome">
-            <h2>Welcome to Maddocks Law Firm Dashboard</h2>
-            <p>Professional dashboard for senior partners</p>
           </div>
           
           <QuickAccessTiles />

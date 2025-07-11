@@ -52,12 +52,7 @@ function QuickAccessTiles() {
   }
 
   return (
-    <section className="quick-access-section">
-      <div className="section-header">
-        <h3 className="section-title">Quick Access</h3>
-        <p className="section-subtitle">Frequently used tools and services</p>
-      </div>
-      
+    <section className="quick-access-section">  
       <div className="tiles-grid">
         {tiles.map((tile) => (
           <div 
