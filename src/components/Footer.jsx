@@ -12,19 +12,34 @@ function Footer() {
 
   const contactInfo = {
     address: {
-      street: 'Level 27, 140 William Street',
-      city: 'Melbourne VIC 3000',
+      street: 'Collins Square | Tower Two\nLevel 25, 727 Collins Street',
+      city: 'Melbourne VIC 3008',
       country: 'Australia'
     },
-    phone: '+61 3 9288 0555',
+    phone: '+61 3 9258 3555',
     email: 'info@maddocks.com.au',
     website: 'www.maddocks.com.au'
   }
 
   const offices = [
-    { city: 'Melbourne', phone: '+61 3 9288 0555' },
-    { city: 'Sydney', phone: '+61 2 9291 7100' },
-    { city: 'Canberra', phone: '+61 2 6217 4000' }
+    { 
+      city: 'Melbourne', 
+      phone: '+61 3 9258 3555',
+      address: 'Collins Square | Tower Two\nLevel 25, 727 Collins Street\nMelbourne VIC 3008',
+      link: 'https://www.maddocks.com.au/locations/melbourne'
+    },
+    { 
+      city: 'Sydney', 
+      phone: '+61 2 9291 6100',
+      address: 'Angel Place Level 27,\n123 Pitt Street\nSydney NSW 2000',
+      link: 'https://www.maddocks.com.au/locations/sydney'
+    },
+    { 
+      city: 'Canberra', 
+      phone: '+61 2 6120 4800',
+      address: 'Maddocks House\nLevel 1, 40 Macquarie Street\nBarton ACT 2600',
+      link: 'https://www.maddocks.com.au/locations/canberra'
+    }
   ]
 
   return (
@@ -70,10 +85,29 @@ function Footer() {
           <h4 className="section-title">Our Offices</h4>
           <div className="offices-list">
             {offices.map((office, index) => (
-              <div key={index} className="office-item">
-                <span className="office-city">{office.city}</span>
-                <span className="office-phone">{office.phone}</span>
-              </div>
+              <a 
+                key={index} 
+                href={office.link} 
+                className="office-item office-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="office-header">
+                  <span className="office-city">{office.city}</span>
+                  <span className="office-arrow">→</span>
+                </div>
+                <div className="office-details">
+                  <div className="office-contact">
+                    <span className="contact-icon">📞</span>
+                    <span className="office-phone">{office.phone}</span>
+                  </div>
+                  <div className="office-address">
+                    {office.address.split('\n').map((line, i) => (
+                      <span key={i}>{line}</span>
+                    ))}
+                  </div>
+                </div>
+              </a>
             ))}
           </div>
         </div>

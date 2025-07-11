@@ -62,11 +62,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  align-items: stretch;
 }
 
 .performance-overview {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .overview-card {
@@ -74,6 +76,9 @@
   border-radius: 16px;
   padding: 1.5rem;
   border: 1px solid #e5e7eb;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-title {
@@ -82,6 +87,13 @@
   font-weight: 600;
   color: #374151;
   margin: 0 0 1.5rem 0;
+}
+
+.progress-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .progress-stats {
@@ -175,6 +187,9 @@
   border-radius: 16px;
   padding: 1.5rem;
   border: 1px solid #e5e7eb;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .chart-title {
@@ -191,6 +206,7 @@
   justify-content: space-between;
   height: 180px;
   gap: 1rem;
+  flex: 1;
 }
 
 .chart-bar {
