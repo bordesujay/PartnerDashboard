@@ -1,0 +1,174 @@
+.quick-access-section {
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #f8f9fa;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.025em;
+}
+
+.section-subtitle {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.access-tile {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 1.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.access-tile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.access-tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 1);
+}
+
+.access-tile:hover::before {
+  opacity: 1;
+}
+
+.access-tile:hover .tile-icon {
+  transform: scale(1.1);
+  color: var(--accent-color);
+}
+
+.access-tile:hover .tile-arrow {
+  transform: translateX(8px);
+  color: var(--accent-color);
+}
+
+.tile-icon {
+  font-size: 2.5rem;
+  margin-right: 1.5rem;
+  transition: all 0.3s ease;
+  color: #6b7280;
+  min-width: 60px;
+  text-align: center;
+}
+
+.tile-content {
+  flex: 1;
+}
+
+.tile-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.tile-description {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.tile-arrow {
+  font-size: 1.5rem;
+  color: #9ca3af;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+
+/* Active/Click State */
+.access-tile:active {
+  transform: translateY(-4px);
+  transition: transform 0.1s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tiles-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .access-tile {
+    padding: 1.5rem;
+  }
+  
+  .tile-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    min-width: 50px;
+  }
+  
+  .tile-title {
+    font-size: 1.125rem;
+  }
+  
+  .tile-description {
+    font-size: 0.875rem;
+  }
+  
+  .section-title {
+    font-size: 1.875rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .access-tile {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+  }
+  
+  .tile-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .tile-arrow {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+} 

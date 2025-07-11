@@ -1,0 +1,146 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  color: #2b5c57;
+  box-shadow: 0 2px 12px rgba(43, 92, 87, 0.15);
+  border-bottom: 3px solid #d4af37;
+  min-height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+}
+
+/* Logo Section */
+.header-left {
+  flex: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  background: linear-gradient(45deg, #d4af37, #f4e18a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.firm-name {
+  display: flex;
+  align-items: center;
+}
+
+.maddocks-logo {
+  height: 48px;
+  width: auto;
+  color: #2b5c57;
+}
+
+.firm-subtitle {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.75rem;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: -2px;
+}
+
+/* Center Greeting Section */
+.header-center {
+  flex: 2;
+  text-align: center;
+}
+
+.greeting {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2b5c57;
+  margin-bottom: 0.25rem;
+}
+
+.datetime {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+/* Weather Widget */
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.weather-widget {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(43, 92, 87, 0.08);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(43, 92, 87, 0.2);
+}
+
+.weather-icon {
+  font-size: 1.5rem;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.weather-temp {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2b5c57;
+  line-height: 1;
+}
+
+.weather-condition {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.75rem;
+  color: #6b7280;
+  line-height: 1;
+  margin-top: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .header-left, .header-center, .header-right {
+    flex: none;
+  }
+  
+  .greeting {
+    font-size: 1.1rem;
+  }
+  
+  .datetime {
+    font-size: 0.8rem;
+  }
+} 
